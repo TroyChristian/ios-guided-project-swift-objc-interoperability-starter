@@ -14,6 +14,7 @@
 		BD36BE0723A7F27C00ED64BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD36BE0523A7F27C00ED64BD /* LaunchScreen.storyboard */; };
 		BD36BE1123A7F2E200ED64BD /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD36BE1023A7F2E200ED64BD /* ContactsTableViewController.swift */; };
 		FB685CB624043BB400D23C03 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB685CB524043BB400D23C03 /* Contact.swift */; };
+		FB685CBA24043CB900D23C03 /* TLCContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB685CB924043CB900D23C03 /* TLCContactController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,9 @@
 		BD36BE0823A7F27C00ED64BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD36BE1023A7F2E200ED64BD /* ContactsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
 		FB685CB524043BB400D23C03 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		FB685CB724043CB800D23C03 /* Contacts-Hybrid-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Contacts-Hybrid-Bridging-Header.h"; sourceTree = "<group>"; };
+		FB685CB824043CB900D23C03 /* TLCContactController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLCContactController.h; sourceTree = "<group>"; };
+		FB685CB924043CB900D23C03 /* TLCContactController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TLCContactController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,9 @@
 				BD36BE0523A7F27C00ED64BD /* LaunchScreen.storyboard */,
 				BD36BE0823A7F27C00ED64BD /* Info.plist */,
 				FB685CB524043BB400D23C03 /* Contact.swift */,
+				FB685CB824043CB900D23C03 /* TLCContactController.h */,
+				FB685CB924043CB900D23C03 /* TLCContactController.m */,
+				FB685CB724043CB800D23C03 /* Contacts-Hybrid-Bridging-Header.h */,
 			);
 			path = "Contacts-Hybrid";
 			sourceTree = "<group>";
@@ -102,6 +109,7 @@
 				TargetAttributes = {
 					BD36BDF623A7F27B00ED64BD = {
 						CreatedOnToolsVersion = 11.3;
+						LastSwiftMigration = 1110;
 					};
 				};
 			};
@@ -143,6 +151,7 @@
 			files = (
 				FB685CB624043BB400D23C03 /* Contact.swift in Sources */,
 				BD36BDFB23A7F27B00ED64BD /* AppDelegate.swift in Sources */,
+				FB685CBA24043CB900D23C03 /* TLCContactController.m in Sources */,
 				BD36BE1123A7F2E200ED64BD /* ContactsTableViewController.swift in Sources */,
 				BD36BDFD23A7F27B00ED64BD /* SceneDelegate.swift in Sources */,
 			);
@@ -280,6 +289,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VXUQXR6S56;
 				INFOPLIST_FILE = "Contacts-Hybrid/Info.plist";
@@ -290,6 +300,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lambdaschool.Contacts-Hybrid";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Contacts-Hybrid/Contacts-Hybrid-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -299,6 +311,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VXUQXR6S56;
 				INFOPLIST_FILE = "Contacts-Hybrid/Info.plist";
@@ -309,6 +322,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lambdaschool.Contacts-Hybrid";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Contacts-Hybrid/Contacts-Hybrid-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
