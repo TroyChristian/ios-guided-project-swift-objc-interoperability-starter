@@ -22,7 +22,8 @@
     self = [super init];
     if (self) {
         _internalContacts = [[NSMutableArray alloc] init];
-        
+        //for testing
+        [self addTestContacts];
     }
     return self;
 }

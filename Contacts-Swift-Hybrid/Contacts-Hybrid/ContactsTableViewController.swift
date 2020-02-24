@@ -7,9 +7,14 @@
 //
 
 import UIKit
-
+//ContactController (objC)
+//Contact(swift)
+//TableViewController(swift)
 
 class ContactsTableViewController: UITableViewController {
+    
+    // we need to expose the Objc code files to swift using bridging header
+    var contactController = TLCContactController() //alloc/init all in one step
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -23,13 +28,18 @@ class ContactsTableViewController: UITableViewController {
 	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		
 		
-		return 10
+        return contactController.contacts.count
 	}
 	
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "ContactCell", for: indexPath)
 		
-		cell.textLabel?.text = "HI"
+        if let contact = contactController.contacts[indexPath.row] as? Contact {
+            cell.textLabel?.text = contact.name
+            cell.detailTextLabel?.text = contact.relationship 
+        }
+        
+       
 		
 		return cell
 	}
