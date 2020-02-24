@@ -8,10 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
+@class Contact; //Forward class declaration (Swift Class)
+
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface TLCContactController : NSObject
-@property (nonatomic, readonly) NSArray *contacts;
+
+//Add lightweight generics to give type info for Swift
+@property (nonatomic, readonly) NSArray<Contact *> *contacts;
 
 
 @end
