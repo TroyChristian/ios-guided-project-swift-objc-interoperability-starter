@@ -8,6 +8,7 @@
 
 import Foundation
 // Swift structs do not work in Obj-C, so we need to use a class
+//objc (TLCContact) can rename for obj-c (causing issue for forward class declaration, not recommended
 @objc class Contact: NSObject {
   @objc  var name:String
   @objc  var relationship:String?

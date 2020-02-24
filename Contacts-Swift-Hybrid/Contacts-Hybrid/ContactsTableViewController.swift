@@ -11,10 +11,12 @@ import UIKit
 //Contact(swift)
 //TableViewController(swift)
 
+//Rename an Obj-C class for Swift
+
 class ContactsTableViewController: UITableViewController {
     
     // we need to expose the Objc code files to swift using bridging header
-    var contactController = TLCContactController() //alloc/init all in one step
+    var contactController = ContactController() //alloc/init all in one step
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -34,10 +36,11 @@ class ContactsTableViewController: UITableViewController {
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "ContactCell", for: indexPath)
 		
-        if let contact = contactController.contacts[indexPath.row] as? Contact {
+        //contacts array is now a <Contacts> array not <Any>
+   let  contact = contactController.contacts[indexPath.row]
             cell.textLabel?.text = contact.name
             cell.detailTextLabel?.text = contact.relationship 
-        }
+        
         
        
 		
@@ -45,3 +48,5 @@ class ContactsTableViewController: UITableViewController {
 	}
 
 }
+
+//Rename an Obj-C class for Swift

@@ -13,6 +13,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+//Rename for Swift
+NS_SWIFT_NAME(ContactController)
+
 @interface TLCContactController : NSObject
 
 //Add lightweight generics to give type info for Swift
